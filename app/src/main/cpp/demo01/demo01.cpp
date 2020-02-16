@@ -14,7 +14,7 @@ static void logInfo(JNIEnv *env, jobject _clazz, const char *format, ...) {
     if (NULL == methodID) {
         jclass clazz = env->GetObjectClass(_clazz);
 
-        methodID = env->GetMethodID(clazz, "jniLogInfo", "(Ljava/lang/String;)V");
+        methodID = env->GetMethodID(clazz, "setLogMessage", "(Ljava/lang/String;)V");
 
         env->DeleteLocalRef(clazz);
     }
